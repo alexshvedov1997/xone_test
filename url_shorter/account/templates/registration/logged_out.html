@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Выход{% endblock %}
+
+{% block content %}
+<h2>Выход из профиля</h2>
+<p><a href="{% url 'url_shorter:main_page' %}">На главную</a></p>
+<p>Вы успещно вышли из профиля.
+        Вы можете зайти снова <a href="{% url 'account:login' %}">Логин</a>.
+</p>
+{% endblock %}

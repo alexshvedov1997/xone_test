@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %} Url form{% endblock %}
+
+
+{% block content %}
+<ul>
+    <li>
+        <a  href="{% url 'url_shorter:main_page' %}">На главную</a>
+    </li>
+</ul>
+
+
+<h2>Введите полный Url</h2>
+    <form method="POST">
+        {% csrf_token %}
+    <table>
+        {{ form }}
+    </table>
+    <input type="submit" value="Сократить" >
+</form>
+{% endblock %}

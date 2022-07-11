@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %} Url form{% endblock %}
+
+
+{% block content %}
+<ul>
+    <li>
+        <a  href="{% url 'url_shorter:main_page' %}">На главную</a>
+    </li>
+</ul>
+
+<p>Длинный Url:<br> {{ url_storage.url_long }}</p>
+<p>Короткий Url: {{ url_storage.url_short }}</p>
+
+{% endblock %}
